@@ -7,7 +7,7 @@ can call to send a message to a named person or group, or to fire a generic even
 you can manage recipients (adding and removing from groups and event notifications) and manage
 the channels by which any given individual is notified (for example SMS or Twitter)
 
-This client library provides simple access to RedFlash. Examples:
+This client library provides simple access to RedFlash. Examples::
 
     from rfclient.redflash import RedFlashClient
     rfc = RedFlashClient(rf_url="http://my.redflash.url", api_key="<key obtained from admin>")
