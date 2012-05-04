@@ -30,4 +30,28 @@ log handler. The class is ``rfclient.rflogger.RedFlashHandler`` and takes the fo
 * notify_contacts: list of contact names to notify (if any)
 * fail_silently: default True, swallow errors e.g. if invalid or disabled recipient
 
+An exmaple of a Python ``dictConfig`` handler clause::
 
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler'
+        },  
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler'
+        },  
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/var/log/networklocum.log',
+            },  
+        'redflash': {
+            'level': 'INFO',
+            'class': 'rfclient.rflogger.RedFlashHandler',
+            'host' : '<REDFLASH HOST>',
+            'apikey': '<YOUR API KEY>',
+            'notify_groups': [<GROUPS LIST>],
+            'notify_contacts': [<CONTACTS LIST>],
+        }   
+    },
