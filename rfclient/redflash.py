@@ -11,7 +11,7 @@ application. """
     def __init__(self, rf_url, api_key):
         """ Create a client that connects to the specified RedFlash server
 at rf_url using the api_key. """
-        self.rf_url = rf_url
+        self.rf_url = rf_url.strip('/')
         self.api_key = api_key
         if not api_key:
             raise Exception("API KEY must be non-empty and not null")

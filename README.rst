@@ -17,3 +17,17 @@ This client library provides simple access to RedFlash. Examples::
     # args are a set of keyword arguments that get passed to the message
     # template
     rfc.fire_event(<event_slug>, **kwargs)
+
+Logging
+-------
+
+A simple RedFlash logging handler is also provided. Use as any other
+log handler. The class is ``rfclient.rflogger.RedFlashHandler`` and takes the following arguments:
+
+* host: the RedFlash server
+* apikey
+* notify_groups: list of group names to notify (if any)
+* notify_contacts: list of contact names to notify (if any)
+* fail_silently: default True, swallow errors e.g. if invalid or disabled recipient
+
+
