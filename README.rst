@@ -33,19 +33,6 @@ log handler. The class is ``rfclient.rflogger.RedFlashHandler`` and takes the fo
 An exmaple of a Python ``dictConfig`` handler clause::
 
     'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler'
-        },  
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler'
-        },  
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/var/log/networklocum.log',
-            },  
         'redflash': {
             'level': 'INFO',
             'class': 'rfclient.rflogger.RedFlashHandler',
