@@ -30,6 +30,7 @@ log handler. The class is ``rfclient.rflogger.RedFlashHandler`` and takes the fo
 * notify_contacts: list of contact names to notify (if any)
 * fail_silently: default True, swallow errors e.g. if invalid or disabled recipient
 * max_len: If None or 0 messages are sent 'as-is', otherwise the message is truncated to the stated length prior to sending. Prevent accidentally sending a large message as a multi-part SMS! Default 160.
+* prefix: If set, this is prefixed to all messages going through this logger.
 
 The expectation is that this be used to raise SMS alerts rather than email
 hence the default position of truncating messages. To disable truncation,
@@ -46,5 +47,6 @@ An exmaple of a Python ``dictConfig`` handler clause::
             'notify_groups': [<GROUPS LIST>],
             'notify_contacts': [<CONTACTS LIST>],
             'max_len': 140,
+            'prefix': "SYS01:",
         }   
     },
