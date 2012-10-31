@@ -2,8 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name="rfclient",
-    version="0.2.1",
+    version="0.2.3",
     author="ReThought Ltd",
+    author_email="code@rethought-solutions.com",
+    url="https://github.com/aquamatt/rfclient",
     license="BSD",
     keywords="api",
     description="API to the RedFlash notification management system.",
